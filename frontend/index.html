@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NutriVista</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Chatbot Demo</title>
+      <style>
+        /* Style your chatbot icon or button as needed */
+        #chatbot-toggle {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          width: 60px;
+          height: 60px;
+          background-color: tomato;
+          color: white;
+          border: none;
+          border-radius: 50%;
+          cursor: pointer;
+          outline: none;
+        }
+      </style>
+    </head>
+  
+    <body>
+  
+      <button id="chatbot-toggle">NutriBot</button>
+  
+      <iframe id="chatbot-frame"
+        allow="microphone;"
+        src="https://console.dialogflow.com/api-client/demo/embedded/64b3b919-823d-49da-a7b4-4120cbe31591"
+        style="position: fixed; bottom: 0; right: 20px; width: 300px; height: 0; border:1px solid tomato; opacity: 0;"></iframe>
+  
+      <script>
+  
+        const chatbotFrame = document.getElementById('chatbot-frame');
+        const chatbotToggle = document.getElementById('chatbot-toggle');
+        let isChatbotOpen = false;
+  
+        chatbotToggle.addEventListener('click', function () {
+          if (isChatbotOpen) {
+  
+            chatbotFrame.style.height = '400px';
+            chatbotFrame.style.opacity = '0';
+            isChatbotOpen = false;
+          } else {
+  
+            chatbotFrame.style.height = '400px';
+            chatbotFrame.style.opacity = '1';
+            isChatbotOpen = true;
+          }
+        });
+  
+        window.addEventListener('click', function (event) {
+          if (!event.target.matches('#chatbot-toggle') && !event.target.matches('#chatbot-frame')) {
+            chatbotFrame.style.height = '0';
+            chatbotFrame.style.opacity = '0';
+            isChatbotOpen = false;
+          }
+        });
+      </script>
+  </body>
+</html>
