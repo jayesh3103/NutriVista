@@ -103,6 +103,11 @@ These gaps hinder restaurants from meeting **customer expectations**, attracting
 
 ---
 
+## 🌐 Live Website
+The platform is live! Visit us at [NutriVista](https://nutrivista-frontend.onrender.com) to explore our health-conscious dining options and experience the AI-powered meal customization! 🍽️🚀
+
+---
+
 ## 🤝 Contributing
 We welcome contributions from the community! Please fork the repository and submit a pull request with enhancements or fixes. ✨👩‍💻👨‍💻
 
