@@ -52,3 +52,19 @@
         text-align: center;
     }
 }
+.feedback-button {
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.feedback-button:hover {
+    background-color: #e84118;
+    transform: scale(1.05);
+}
