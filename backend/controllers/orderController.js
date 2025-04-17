@@ -2,6 +2,12 @@ import orderModel from "../models/orderModel.js";
 import userModel from "../models/userModel.js"
 import Stripe from "stripe";
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+
+// config variables
+const currency = "inr";
+const deliveryCharge = 50;
+const frontend_URL = "https://nutrivista-frontend.onrender.com";
+
 // Placing User Order for Frontend
 const placeOrder = async (req, res) => {
 
